@@ -1,4 +1,4 @@
-# mockify-io-30aaababaabb
+# mockify-io-30abbbaababa
 
 REPLACE_WITH_PROJECT_DESCRIPTION
 
@@ -20,7 +20,7 @@ REPLACE_WITH_TECH_STACK_POINTS
 
 ```sh
 git clone https://github.com/GPT-Engineer-App-Dev/mockify-io-30.git
-cd mockify-io-30aaababaabb
+cd mockify-io-30abbbaababa
 npm i
 ```
 
