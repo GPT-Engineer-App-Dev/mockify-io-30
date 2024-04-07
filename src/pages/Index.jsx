@@ -1,24 +1,15 @@
-import { Flex } from "@chakra-ui/react";
-import { useState } from "react";
-import OthelloBoard from "../components/OthelloBoard";
-import StartScreen from "../components/StartScreen";
+// Complete the Index page component here
+// Use chakra-ui
+import { Button } from "@chakra-ui/react"; // example
+import { FaPlus } from "react-icons/fa"; // example - use react-icons/fa for icons
 
 const Index = () => {
-  const [gameStarted, setGameStarted] = useState(false);
-  const [player1Name, setPlayer1Name] = useState("");
-  const [player2Name, setPlayer2Name] = useState("");
-
-  const handleStart = (p1Name, p2Name) => {
-    setPlayer1Name(p1Name);
-    setPlayer2Name(p2Name);
-    setGameStarted(true);
-  };
-
+  // TODO: Create the website here!
   return (
-    <Flex align="center" justify="center" h="100vh">
-      {gameStarted ? <OthelloBoard player1Name={player1Name} player2Name={player2Name} /> : <StartScreen onStart={handleStart} />}
-    </Flex>
-  );
+    <Button>
+      Hello world! <FaPlus />
+    </Button>
+  ); // example
 };
 
 export default Index;
