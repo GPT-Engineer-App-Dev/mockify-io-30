@@ -1,7 +1,7 @@
-import { Grid, GridItem, Circle, Text } from "@chakra-ui/react";
+import { Grid, GridItem, Circle, Text, Box } from "@chakra-ui/react";
 import { useState } from "react";
 
-const OthelloBoard = () => {
+const OthelloBoard = (props) => {
   const [board, setBoard] = useState([
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
@@ -136,7 +136,10 @@ const OthelloBoard = () => {
           </GridItem>
         )),
       )}
-      {gameOver && <Text>{winner === 0 ? "It's a tie!" : `Player ${winner} wins!`}</Text>}
+      <Box mt={4}>
+        <Text>Current Player: {currentPlayer === 1 ? props.player1Name : props.player2Name}</Text>
+        {gameOver && <Text mt={2}>{winner === 0 ? "It's a tie!" : `${winner === 1 ? props.player1Name : props.player2Name} wins!`}</Text>}
+      </Box>
     </Grid>
   );
 };
